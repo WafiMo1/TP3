@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/judo.jpg); background-repeat: no-repeat; background-attachment: fixed;background-size: 100% 100%;
+    }
+   body {
+    background-color: white; 
+    font-family: Verdana, sans-serif; 
+    font-size: 100%;
+    }
+    p {
+        color: #ffffff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+   h1 {
+   font-family: Verdana, Geneva, Tahoma, sans-serif; color:#ffffff;
+    }
+   h2 {
+    color: #ffffff;
+    text-align: center;
+
+    }
+    h4{
+    color: #ffffff; text-align: center; font-size: 25px;
+}
+   li {
+    display: inline-block; 
+    width: 190px; 
+    height: 40px; 
+    margin: 0px; 
+    padding: 0px; 
+    border-right: 1px solid; 
+    text-align: center;
+    line-height: 40px; 
+    text-decoration: none;
+    color: #ffffff;
+    }
+   a:link {
+    color: green;
+    text-decoration: underline;
+    }
+   a:visited {
+    color: gray;
+    }
+   a:hover {
+    color: red;
+    text-decoration: none;
+   }
+   a:active, a:focus {
+    color: red;
+   }
