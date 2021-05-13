@@ -23,7 +23,7 @@ function createNode(element) {
       return employees.map(function (ath) {
         let tr = createNode("p"),
         span = createNode("span");
-        span.innerHTML = `Nom: ${ath.nom} `;//ORDRE DÉCIDÉ
+        span.innerHTML = `Nom du participant: ${ath.nom} `;//ORDRE DÉCIDÉ
         append(tr, span);
         append(athlete_ul, tr);
 });
