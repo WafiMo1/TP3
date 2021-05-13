@@ -12,7 +12,7 @@ function createNode(element) {
   const url = "http://localhost:8080/ords/tp3/trophée";
   const club_ul = document.getElementById("compétition");
   const url = "http://localhost:8080/ords/tp3/compétition"; */
-  const athlete_ul = document.getElementById("athlètes");
+  const athlete_ul = document.getElementById("toto");
   const url = "http://localhost:8080/ords/tp3/athlète";
   //METTRE POUR CHAQUE TABLE URL
   fetch(url)
@@ -20,8 +20,13 @@ function createNode(element) {
     .then(function (data) {
       //CE SONT DES ALIAS
       let employees = data.items; //.results;
-
-
+      return employees.map(function (ath) {
+        let tr = createNode("p"),
+        span = createNode("span");
+        span.innerHTML = `${ath.nom}  Numéro`;//ORDRE DÉCIDÉ
+        append(tr, span);
+        append(athlete_ul, tr);
+});
     })
     .catch(function (error) {
       console.log(JSON.stringify(error));
