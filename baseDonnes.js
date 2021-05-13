@@ -6,13 +6,12 @@ function createNode(element) {
     return parent.appendChild(el);
   }
   //DECLARER VARIABLES
-  /* const club_ul = document.getElementById("clubs");
-  const url = "http://localhost:8080/ords/tp3/club";
+  /* 
   const trophée_ul = document.getElementById("trophée");
   const url = "http://localhost:8080/ords/tp3/trophée";
   const club_ul = document.getElementById("compétition");
   const url = "http://localhost:8080/ords/tp3/compétition"; */
-  const athlete_ul = document.getElementById("toto");
+  const athlete_ul = document.getElementById("nomParticipant");
   const url = "http://localhost:8080/ords/tp3/athlète";
   //METTRE POUR CHAQUE TABLE URL
   fetch(url)
@@ -31,3 +30,25 @@ function createNode(element) {
     .catch(function (error) {
       console.log(JSON.stringify(error));
     });
+
+// CLUB
+    const club_ul = document.getElementById("club");
+  const url = "http://localhost:8080/ords/tp3/club";
+  fetch(url)
+    .then((resp) => resp.json())
+    .then(function (data) {
+      //CE SONT DES ALIAS
+      let clubNum = data.items; //.results;
+      return clubNum.map(function (club) {
+        let ta = createNode("p"),
+        span = createNode("span");
+        span.innerHTML = `Numéro du club: ${club.num_club} `;//ORDRE DÉCIDÉ
+        append(ta, span);
+        append(club_ul, ta);
+});
+    })
+    .catch(function (error) {
+      console.log(JSON.stringify(error));
+    }); 
+
+   
