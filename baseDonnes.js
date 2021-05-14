@@ -79,7 +79,7 @@ function createNode(element) {
     return competitionNum.map(function (competition) {
       let to = createNode("p"),
       span = createNode("span");
-      span.innerHTML = `Numéro du club: ${competition.num_compétition} `;//ORDRE DÉCIDÉ
+      span.innerHTML = `Numéro de compétition: ${competition.num_compétition} `;//ORDRE DÉCIDÉ
       append(to, span);
       append(club_ul, to);
 });
@@ -88,4 +88,4 @@ function createNode(element) {
     console.log(JSON.stringify(error));
   });
   
-  //
+ 
