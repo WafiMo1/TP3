@@ -6,10 +6,6 @@ function createNode(element) {
     return parent.appendChild(el);
   }
   //DECLARER VARIABLES
-
-  
-
-
     const athleteGrade_ul = document.getElementById("gradeParticipant");
     const url = "http://localhost:8080/ords/tp3/athlète";
     //METTRE POUR CHAQUE TABLE URL
