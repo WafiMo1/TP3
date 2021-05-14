@@ -9,8 +9,8 @@ function createNode(element) {
 
 // CLUB
     const club_ul = document.getElementById("club");
-  const url = "http://localhost:8080/ords/tp3/club";
-  fetch(url)
+  const url1 = "http://localhost:8080/ords/tp3/club";
+  fetch(url1)
     .then((resp) => resp.json())
     .then(function (data) {
       //CE SONT DES ALIAS
