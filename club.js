@@ -14,8 +14,8 @@ function createNode(element) {
     .then((resp) => resp.json())
     .then(function (data) {
       //CE SONT DES ALIAS
-      let clubNum = data.items; //.results;
-      return clubNum.map(function (club) {
+      let employees = data.items; //.results;
+      return employees.map(function (club) {
         let ta = createNode("p"),
         span = createNode("span");
         span.innerHTML = `Numéro du club: ${club.num_club} `;//ORDRE DÉCIDÉ
