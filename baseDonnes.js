@@ -6,9 +6,7 @@ function createNode(element) {
     return parent.appendChild(el);
   }
   //DECLARER VARIABLES
-  /* 
-  const trophée_ul = document.getElementById("trophée");
-  const url = "http://localhost:8080/ords/tp3/trophée"; */
+
 
   const athlete_ul = document.getElementById("nomParticipant");
   const url = "http://localhost:8080/ords/tp3/athlète";
@@ -27,9 +25,13 @@ function createNode(element) {
 });
     })
     .catch(function (error) {
-      console.log(JSON.stringify(error));
-    });
-    const athlete_ul = document.getElementById("gradeParticipant");
+        console.log(JSON.stringify(error));
+      });
+  
+
+
+
+    const athleteGrade_ul = document.getElementById("gradeParticipant");
     const url = "http://localhost:8080/ords/tp3/athlète";
     //METTRE POUR CHAQUE TABLE URL
     fetch(url)
@@ -42,12 +44,13 @@ function createNode(element) {
           span = createNode("span");
           span.innerHTML = `Grade du participant: ${ath.grade_ceinture} `;//ORDRE DÉCIDÉ
           append(tr, span);
-          append(athlete_ul, tr);
+          append(athleteGrade_ul, tr);
   });
       })
       .catch(function (error) {
         console.log(JSON.stringify(error));
       });
+     
 // CLUB
     const club_ul = document.getElementById("club");
   const url = "http://localhost:8080/ords/tp3/club";
@@ -65,11 +68,11 @@ function createNode(element) {
 });
     })
     .catch(function (error) {
-      console.log(JSON.stringify(error));
-    }); 
+        console.log(JSON.stringify(error));
+      });
 
     //COMPÉTITION
-    const club_ul = document.getElementById("compétition");
+    const competition_ul = document.getElementById("compétition");
   const url = "http://localhost:8080/ords/tp3/compétition";
   fetch(url)
   .then((resp) => resp.json())
@@ -84,6 +87,7 @@ function createNode(element) {
       append(club_ul, to);
 });
   })
+
   .catch(function (error) {
     console.log(JSON.stringify(error));
   });
