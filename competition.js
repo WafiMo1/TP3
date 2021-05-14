@@ -10,8 +10,8 @@ function createNode(element) {
 
     //COMPÉTITION
     const competition_ul = document.getElementById("compétition");
-  const url = "http://localhost:8080/ords/tp3/compétition";
-  fetch(url)
+  const url2 = "http://localhost:8080/ords/tp3/compétition";
+  fetch(url2)
   .then((resp) => resp.json())
   .then(function (data) {
     //CE SONT DES ALIAS
@@ -19,7 +19,7 @@ function createNode(element) {
     return employees.map(function (competition) {
       let to = createNode("p"),
       span = createNode("span");
-      span.innerHTML = `Numéro de compétition: ${competition.num_compétition} `;//ORDRE DÉCIDÉ
+      span.innerHTML = `Numéro de compétition: ${competition.num_competition} `;//ORDRE DÉCIDÉ
       append(to, span);
       append(club_ul, to);
 });
