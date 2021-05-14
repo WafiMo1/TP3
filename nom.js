@@ -19,7 +19,7 @@ function createNode(element) {
       return employees.map(function (ath) {
         let tr = createNode("p"),
         span = createNode("span");
-        span.innerHTML = `Nom du participant: ${ath.nom}<p>Grade du participant:  ${ath.grade_ceinture}</p>`;//ORDRE DÉCIDÉ
+        span.innerHTML = `Nom du participant: ${ath.nom}<p>Grade du participant:  ${ath.grade_ceinture}</p><p>Nombre de trophées gagnés:  ${ath.trophée_nombre_trophées}</p>`;//ORDRE DÉCIDÉ
         append(tr, span);
         append(athlete_ul, tr);
 });
